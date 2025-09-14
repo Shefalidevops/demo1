@@ -7,5 +7,6 @@ RUN pip install flask
 WORKDIR /app
 
 COPY . .
+RUN mkdir -p /app/logs
 
-CMD ["python3" , "main.py", "0.0.0.0", "8000"]
+CMD ["python3" , "main.py", "--host=0.0.0.0", "--port=8000"] 
